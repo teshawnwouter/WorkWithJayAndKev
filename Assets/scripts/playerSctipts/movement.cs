@@ -20,12 +20,7 @@ public class movement : MonoBehaviour
     public int maxHitpoints = 3;
 
     public int charge;
-    //dit is het punt van waar je objecten komen
-    public Transform attackPoint;
 
-    //dit is het object wat je schiet
-    public GameObject lazer;
-    public LineRenderer lineRenderer;
 
     public Vector3 giveMeMoney;
     public Vector3 overtimeCheck;
@@ -53,13 +48,6 @@ public class movement : MonoBehaviour
     {
        
         RecoverTIme();
-
-        //Debug.Log(Input.GetAxisRaw("Vertical"));
-        if (Input.GetKeyDown(lazerKey) && charge >= 5)
-        {
-            Lazer();
-            charge = charge- 5;
-        }
         
         giveMeMoney = rb.angularVelocity;
         overtimeCheck = rb.velocity;
@@ -79,41 +67,6 @@ public class movement : MonoBehaviour
         }
 
 
-    }
-    private void Lazer()
-    {
-        Debug.Log("lazer");
-        RaycastHit[] hits;
-        hits = Physics.RaycastAll(transform.position, transform.forward, 100.0f);
-        //laser from point a to b
-        lineRenderer.SetPosition(0, attackPoint.position);
-        lineRenderer.SetPosition(1, attackPoint.position + (transform.forward * 100f));
-        StartCoroutine(ShootLaser());
-        Debug.DrawRay(transform.position, transform.forward *100);
-        for (int i = 0; i < hits.Length; i++)
-        {
-
-            RaycastHit hit = hits[i];
-            Renderer rend = hit.transform.GetComponent<Renderer>();
-            if (rend)
-            {
-                rend.material.shader = Shader.Find("Transparent/Diffuse");
-                Color tempColor = rend.material.color;
-                tempColor.a = 0.3f;
-                rend.material.color = tempColor;
-                astroid bussin = rend.transform.GetComponent<astroid>();
-                if(bussin != null)
-                {
-                    bussin.Dynamite();
-                }
-            }
-        }
-    }
-    IEnumerator ShootLaser()
-    {
-        lineRenderer.enabled = true;
-        yield return new WaitForSeconds(.3f);
-        lineRenderer.enabled = false;
     }
 
     public int GetHealthPoints()

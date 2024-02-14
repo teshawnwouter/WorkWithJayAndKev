@@ -1129,18 +1129,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _state: 0
-  proSpeed: 10
-  fireDelay: 1
-  burstDelay: 0.3
+  proSpeed: 20
+  fireDelay: 2
+  burstDelay: 0.1
   burstSpreadAngle: 10
   spreadAngle: 5
   explosionForce: 0
   explosionRadius: 0
-  starterObj: {fileID: 3530099747119301828, guid: 199d6bfea62cf07458770128d59afc10,
+  starterObj: {fileID: 3050140760520080684, guid: 2666ad9b3ea68064e849cfce4ab023a2,
     type: 3}
-  spreadObj: {fileID: 0}
-  burstObj: {fileID: 0}
+  spreadObj: {fileID: 7167845877871166625, guid: 51427fbe1aba15b439117275911f0a2a,
+    type: 3}
+  burstObj: {fileID: 6258743120786426490, guid: 2c3075fb8ba3ba24599e59f07371c17b,
+    type: 3}
   bombObj: {fileID: 0}
+  lazer: {fileID: 5416395635751924235, guid: c8e012a6f82f40049aa9d0096cc47b19, type: 3}
+  lineRenderer: {fileID: 1188108528}
   attackPoint: {fileID: 1959592275}
 --- !u!1001 &1324628546
 PrefabInstance:
