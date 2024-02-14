@@ -9,6 +9,8 @@ TagManager:
   - small
   - Lazer
   - player
+  - coins
+  - coin
   layers:
   - Default
   - TransparentFX
