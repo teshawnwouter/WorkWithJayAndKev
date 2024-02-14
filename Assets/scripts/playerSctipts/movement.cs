@@ -8,6 +8,8 @@ using UnityEngine.SceneManagement;
 public class movement : MonoBehaviour
 {
 
+
+    private int iFrames;
     private bool iFramesCheck;
     private float iFrameTime;
     private float iFrameEnd = 3f;

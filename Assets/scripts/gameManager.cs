@@ -6,7 +6,6 @@ using UnityEngine;
 
 public class gameManager : MonoBehaviour
 {
-    coinCollector coin;
 
     public int Large;
     public int medeum;
@@ -21,7 +20,6 @@ public class gameManager : MonoBehaviour
     private int spawn;
     void Start()
     {
-        coin = GetComponent<coinCollector>();
         Large = 50;
         medeum = 30;
         Small = 10;
@@ -107,7 +105,5 @@ public class gameManager : MonoBehaviour
         PlayerPrefs.SetInt("score", newScore);
         PlayerPrefs.Save();
     }
-
-  
 
 }

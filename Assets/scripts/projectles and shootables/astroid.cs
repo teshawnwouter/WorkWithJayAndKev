@@ -5,7 +5,7 @@ using UnityEngine;
 public class astroid : MonoBehaviour
 {
     public movement Movement;
-    coinCollector coin;
+
 
     Rigidbody rb;
     public GameObject astroids;
