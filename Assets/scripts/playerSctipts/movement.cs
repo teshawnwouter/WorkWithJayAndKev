@@ -24,19 +24,13 @@ public class movement : MonoBehaviour
     public Transform attackPoint;
 
     //dit is het object wat je schiet
-    public GameObject objectToThrow;
     public GameObject lazer;
     public LineRenderer lineRenderer;
 
-    //dit zij de variabele voor het schieten
-    public float throwCooldown;
-    public float throwForce;
     public Vector3 giveMeMoney;
     public Vector3 overtimeCheck;
-    bool readyToThrow;
 
     //dit is het code key die je moet intoesten voor het schieten
-    public KeyCode throwKey = KeyCode.Mouse0;
     public KeyCode lazerKey = KeyCode.Mouse1;
 
     //dit is het draai snelheid
@@ -52,7 +46,6 @@ public class movement : MonoBehaviour
         hitPoints = maxHitpoints;
 
         charge = 0; 
-        readyToThrow = true;
        rb = GetComponent<Rigidbody>();
     }
 
@@ -68,11 +61,6 @@ public class movement : MonoBehaviour
             charge = charge- 5;
         }
         
-
-        if (Input.GetKeyDown(throwKey) && readyToThrow == true) 
-        {
-            Throw();
-        }
         giveMeMoney = rb.angularVelocity;
         overtimeCheck = rb.velocity;
     }
@@ -92,20 +80,6 @@ public class movement : MonoBehaviour
 
 
     }
-    private void Throw()
-    {
-        readyToThrow = false;
-        GameObject projectile = Instantiate(objectToThrow, attackPoint.position, attackPoint.rotation);
-        Rigidbody projectileRb = projectile.GetComponent<Rigidbody>();
-        Vector3 forceDirection = attackPoint.transform.forward;
-
-        Invoke(nameof(ResetThrow), throwCooldown);
-    }
-    private void ResetThrow()
-    {
-        readyToThrow = true;
-    }
-    
     private void Lazer()
     {
         Debug.Log("lazer");
