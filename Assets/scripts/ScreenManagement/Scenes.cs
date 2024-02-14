@@ -17,9 +17,4 @@ public class Scenes : MonoBehaviour
     {
         SceneManager.LoadScene("Credits");
     }
-
-    public void MainMenu()
-    {
-        SceneManager.LoadScene("StartScherm");
-    }
 }
