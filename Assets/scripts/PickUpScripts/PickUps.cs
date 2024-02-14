@@ -5,6 +5,7 @@ using UnityEngine;
 public abstract class  PickUps : MonoBehaviour
 {
     protected movement Movement;
+    protected gameManager GameManager;
     public virtual void Actiate()
     {
            Destroy(gameObject);
