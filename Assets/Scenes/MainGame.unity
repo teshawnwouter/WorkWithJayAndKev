@@ -1116,6 +1116,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a6f0d6bb6490a44588956697a28a921, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1188108537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188108519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 148c364f6c9a91343b5c9257bb72c23d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _state: 0
+  proSpeed: 10
+  fireDelay: 1
+  burstDelay: 0.3
+  burstSpreadAngle: 10
+  spreadAngle: 5
+  explosionForce: 0
+  explosionRadius: 0
+  starterObj: {fileID: 3530099747119301828, guid: 199d6bfea62cf07458770128d59afc10,
+    type: 3}
+  spreadObj: {fileID: 0}
+  burstObj: {fileID: 0}
+  bombObj: {fileID: 0}
+  attackPoint: {fileID: 1959592275}
 --- !u!1001 &1324628546
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1584,6 +1610,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1881564308}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1959592275 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2351404454100706122, guid: 4b2927bd88d8e3a48a7effb493f2e321,
+    type: 3}
+  m_PrefabInstance: {fileID: 2807179067909841424}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2807179067909841424
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1693,7 +1725,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -5935169921642811279, guid: 4b2927bd88d8e3a48a7effb493f2e321, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -1705,6 +1738,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1188108528}
+    - targetCorrespondingSourceObject: {fileID: 6008925956707375832, guid: 4b2927bd88d8e3a48a7effb493f2e321,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1188108537}
   m_SourcePrefab: {fileID: 100100000, guid: 4b2927bd88d8e3a48a7effb493f2e321, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

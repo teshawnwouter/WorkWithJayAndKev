@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -9016204650322673916}
   - component: {fileID: 1853965858556558086}
   - component: {fileID: -9043986503253501321}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: bullet
   m_TagString: bullet
   m_Icon: {fileID: 0}
@@ -127,7 +127,7 @@ Rigidbody:
     m_Bits: 4294967295
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 576
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
